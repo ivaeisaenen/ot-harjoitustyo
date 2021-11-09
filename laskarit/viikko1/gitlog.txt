@@ -1,3 +1,4 @@
+hiukan editoitu gitlog.txt tiedosto
 commit 2bdfbde6659cb9d55d2c1153328b3dacb2ccdbaa
 Author: ivaeisaenen <ivaeisaenen@gmail.com>
 Date:   Tue Nov 9 10:45:58 2021 +0200

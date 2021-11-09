@@ -1,0 +1,113 @@
+commit 2bdfbde6659cb9d55d2c1153328b3dacb2ccdbaa
+Author: ivaeisaenen <ivaeisaenen@gmail.com>
+Date:   Tue Nov 9 10:45:58 2021 +0200
+
+    poistettu file1 ja file2 nimetty file22
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 21b7018f5efaca74bf0b6512871bcdf4d6beeb93
+Author: ivaeisaenen <ivaeisaenen@gmail.com>
+Date:   Tue Nov 9 10:42:22 2021 +0200
+
+    luotu tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit f600d5a3c5bb23fff1440cc35eb0d02cf22fc9e6
+Author: ivaeisaenen <ivaeisaenen@gmail.com>
+Date:   Tue Nov 9 10:30:41 2021 +0200
+
+    eka.txt ja kolmas.txt lisäyksiä ja poistoja
+
+ eka.txt    | 3 ++-
+ kolmas.txt | 5 ++++-
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+
+commit bf008c509026bae9eaf3897fae3cdd75d004b98d
+Author: ivaeisaenen <ivaeisaenen@gmail.com>
+Date:   Tue Nov 9 10:28:25 2021 +0200
+
+    tiedosto.txt nimetty eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8018a3a7511a4da2b57c9f287c195a05e60ff32d
+Author: ivaeisaenen <ivaeisaenen@gmail.com>
+Date:   Tue Nov 9 10:26:31 2021 +0200
+
+    tiedosto toinen.txt poistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit f11d64185462c41d09b61482ff3adf66127ff8e3
+Author: ivaeisaenen <ivaeisaenen@gmail.com>
+Date:   Mon Nov 8 16:04:10 2021 +0200
+
+    tiedosto hiukan poistoa ja lisäystä
+
+ tiedosto.txt | 24 +++++++++++++++++++++---
+ 1 file changed, 21 insertions(+), 3 deletions(-)
+
+commit 6a1bdf80f108a8f908fa454ab0acd7a9367eb436
+Author: ivaeisaenen <ivaeisaenen@gmail.com>
+Date:   Mon Nov 8 16:03:19 2021 +0200
+
+    tiedosto pitk lisäys
+
+ tiedosto.txt | 28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+
+commit d4798908926a3e0e20097479ee047ea2aa41c204
+Author: ivaeisaenen <ivaeisaenen@gmail.com>
+Date:   Mon Nov 8 15:59:41 2021 +0200
+
+    hakemiston stuff lisäys
+
+ stuff/jokintiedosto | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 567b836a42b39d71a32f6ce07f4b3672cee7deac
+Author: ivaeisaenen <ivaeisaenen@gmail.com>
+Date:   Mon Nov 8 15:58:41 2021 +0200
+
+    muutos toinen ja kolmas
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit ec0d759cd634c04f7f219c323cb086666ac607e8
+Author: ivaeisaenen <ivaeisaenen@gmail.com>
+Date:   Mon Nov 8 15:57:22 2021 +0200
+
+    kolmas lisäys
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a7249d21534c93a7e53f85d0966642a07d8ec593
+Author: ivaeisaenen <ivaeisaenen@gmail.com>
+Date:   Mon Nov 8 15:36:45 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 79730b68e0d1e3e41c6c9143366b9818c0ba4f74
+Author: ivaeisaenen <ivaeisaenen@gmail.com>
+Date:   Mon Nov 8 15:35:08 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)

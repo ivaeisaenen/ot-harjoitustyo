@@ -12,6 +12,5 @@ Paikallinen muutos tähän.
 
 ## Viikko 2
 
-[unicafe_test_coverage.png] (https://github.com/ivaeisaenen/ot-harjoitustyo/blob/master/laskarit/viikko2/unicafe_test_coverage_screenshot.PNG)
-
-[vaatimusten määrittely dokumentti] (https://github.com/ivaeisaenen/ot-harjoitustyo/blob/master/laskarit/viikko2/vaatimustenmaarittelydokumentti.md)
+[unicafe_test_coverage.png](https://github.com/ivaeisaenen/ot-harjoitustyo/blob/master/laskarit/viikko2/unicafe_test_coverage_screenshot.PNG)
+[vaatimusten määrittely dokumentti](https://github.com/ivaeisaenen/ot-harjoitustyo/blob/master/laskarit/viikko2/vaatimustenmaarittelydokumentti.md)

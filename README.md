@@ -75,7 +75,7 @@ Tiedoston [.pylintrc](./.pylintrc) määrittelemät tarkistukset voi suorittaa k
 poetry run invoke lint
 ```
 
-<--!
+<!--
 ## Viikko 1
 
 [gitlog.txt](https://github.com/ivaeisaenen/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)

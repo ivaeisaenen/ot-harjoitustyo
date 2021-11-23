@@ -1,3 +1,4 @@
+ot-harjoitustyo.code-workspace
 /laskarit/viikko2/unicafe/.pytest_cache
 /laskarit/viikko2/unicafe/src/__pycache__/
 /laskarit/viikko2/unicafe/src/tests/__pycache__/
@@ -8,3 +9,9 @@
 /laskarit/viikko2/maksukortti/src/tests/__pycache__/
 /laskarit/viikko2/maksukortti/.coverage
 /laskarit/viikko2/maksukortti/htmlcov
+.pytest_cache
+src/__pycache__/
+src/tests/__pycache__/
+.coverage
+.coveragerc
+htmlcov

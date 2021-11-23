@@ -1,0 +1,11 @@
+material:steel
+criterion:mises
+mean_stress_correction:goodman
+input_files:['./data/stress_history1.txt', './data/stress_history2.txt']
+material_dict:{'steel': {'fR1': 200.0, 'fR0': 100.0, 'Rm': 500.0, 'Rp02': 300.0}}
+log:<_io.TextIOWrapper name='./data/stress_history1_log.txt' mode='w' encoding='cp1252'>
+Reading file "./data/stress_history1.txt"
+Reading file "./data/stress_history2.txt"
+Read stress from files "['./data/stress_history1.txt', './data/stress_history2.txt']" lenght 2Start running fatigue solver
+Done running fatigue solver
+Finished calculation in 0.002524852752685547 seconds

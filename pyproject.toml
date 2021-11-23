@@ -5,12 +5,11 @@ description = ""
 authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.10.0"
-numpy = "^1.21.4"
+python = "^3.8.0"
 invoke = "^1.6.0"
-pytest = "^6.2.5"
 
 [tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
 coverage = "^6.1.2"
 lint = "^1.2.1"
 

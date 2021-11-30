@@ -41,7 +41,7 @@ def read_stress(input_dict):
     stress_history = reoder_stress_data(datas)
     input_dict["stress_history"] = stress_history
 
-    log.write(f"Stress read \"{input_dict['input_files']}\" lenght {len(stress_history)}")
+    log.write(f"Stress read \"{input_dict['input_files']}\" lenght {len(stress_history)}\n")
 
 
 def reoder_stress_data(datas):
@@ -86,12 +86,11 @@ def calculate(input_dict):
         log.close()
         sys.exit()
 
-    if mat_str == "steel":
-        mat = input_dict["material_dict"]["steel"]
-    # elif mat_str == "cast_iron":
-        # mat = cast_iron
-    else:
-        log.write(f"calculate: Invalid material name \"{mat_str}\" ...\n")
+    try:
+        mat = input_dict["material_dict"][input_dict["material_name"]]
+    except KeyError as error_str:
+        log.write(f"calculate: Invalid material name \"{mat_str}\" caused error:\n")
+        log.write(f"{error_str}\n")
         log.close()
         sys.exit()
 

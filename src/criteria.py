@@ -1,7 +1,18 @@
 """Stress, equivalent stress and stress_amplitudefety factor calculations"""
 
 def _mises(stress: list):
-    """ Calculates signed von mises stress"""
+    """Calculates signed von mises stress
+
+    Parameters:
+    ----------
+        stress: list
+            A stress using Voigh notation
+
+    Returns
+    -------
+        signed_mises: float
+            Signed Von Mises stress
+    """
     if sum(stress[:3]) >= 0.0:
         sign = 1
     else:
@@ -13,7 +24,23 @@ def _mises(stress: list):
 
 
 def calculate_equivalent_mises(stress_history: list):
-    """Takes stress history of one node"""
+    """Takes stress history of one node and returns stress amplitude and mean stress
+        ie equivalent stress
+
+    Parameters
+    ----------
+        stress_history: list
+            Time history of stress for one node
+
+    Returns
+    -------
+        stress_amplitude: float
+            Stress amplitude of given stress history
+        mean_stress: float
+            Mean stress of given stress history
+
+    """
+
     mises_stresses = []
     for stress in stress_history:
         mises_stresses.append(_mises(stress))
@@ -24,7 +51,9 @@ def calculate_equivalent_mises(stress_history: list):
 
 
 def calculate_mises_sf(stress_history_dict: dict, material_dict: dict, msc):
-    """ Calculates stress_amplitudefety Factor based on material values and stress history"""
+    """ Calculates safety factor based on material values and stress history
+        for all nodes in the stress_history_dict using provided mean stress correction msc
+    """
 
     result_dict = {}
     for id_, stress_history in stress_history_dict.items():

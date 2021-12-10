@@ -2,7 +2,7 @@
 
 ## Sovelluksen tarkoitus
 
-Soveluksen avulla käyttäjän on mahdollista laskea lähtötietojen perusteella varmuuskertoimia haluttujen kriteereiden perusteella
+Soveluksen avulla käyttäjän on mahdollista laskea lähtötietojen perusteella varmuuskertoimia haluttujen kriteereiden ja keskijännityskorjausten perusteella
 
 ## Käyttäjät
 

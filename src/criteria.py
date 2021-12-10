@@ -1,4 +1,4 @@
-"""Stress, equivalent stress and stress_amplitudefety factor calculations"""
+"""Stress, equivalent stress, stress_amplitude, mean_stress and safety factor calculations"""
 
 def _mises(stress: list):
     """Calculates signed von mises stress
@@ -41,20 +41,54 @@ def calculate_equivalent_mises(stress_history: list):
         mean_stress: float
             Mean stress of given stress history
 
+    Note! If only one stress history loading is given, it will be compared to zero loading state
     """
 
     mises_stresses = []
     for stress in stress_history:
         mises_stresses.append(_mises(stress))
 
-    stress_amplitude = 0.5 * (max(mises_stresses) - min(mises_stresses))
-    mean_stress = 0.5 * (max(mises_stresses) + min(mises_stresses))
+    if len(mises_stresses) == 1:
+        stress_amplitude = 0.5 * (mises_stresses[0] - 0)
+        mean_stress = 0.5 * (mises_stresses[0] + 0)
+    else:
+        stress_amplitude = 0.5 * (max(mises_stresses) - min(mises_stresses))
+        mean_stress = 0.5 * (max(mises_stresses) + min(mises_stresses))
+
     return stress_amplitude, mean_stress
 
 
 def calculate_mises_sf(stress_history_dict: dict, material_dict: dict, msc):
     """ Calculates safety factor based on material values and stress history
         for all nodes in the stress_history_dict using provided mean stress correction msc
+
+        Note! Goodman mean stress correction needs only fR1 and Rm
+
+    Parameters
+    ----------
+        stress_history_dict: dict
+            Stress history for every node. The node is the key in the dict
+            and value is list of stress tensors as history.
+        material_dict: dict:
+            Material parameters as dictionary for example [example units]:
+                "fR1" : fatigue limit for fully alternating loading R=-1 [MPa]
+                "fR0" : fatigue limit for pulsating loading R=0 [MPa]
+                "Rm" : ultimate strenght (for tension) [MPa]
+                "Rp02" : Relatively limit 0.2 % for tension [MPa]
+                "Rmc" : Ultimate strenght for compresion [MPa]
+                "Rp02c" : Relatively limit 0.2 % for compression [MPa]
+        msc: func
+            Function for mean stress correction
+
+    Returns
+    -------
+        result_dict: dict
+            Dictionary with results:
+                "SF" safety factor
+                "Saf" mean stress corrected stress amplitude
+                "Sa" stress amplitude
+                "Sm" mean stress
+            The dictionary keys are strings and values floats
     """
 
     result_dict = {}

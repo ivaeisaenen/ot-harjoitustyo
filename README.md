@@ -18,6 +18,12 @@ Python3 komennot on korvattu python komennoilla
 - [Testausdokumentti](./dokumentaatio/testaus.md)
 - [Työaikakirjanpito](./dokumentaatio/tuntikirjanpito.md)
 
+## Releases
+
+- [1.release](https://github.com/ivaeisaenen/ot-harjoitustyo/releases/tag/viikko5)
+
+- [2.release](https://github.com/ivaeisaenen/ot-harjoitustyo/releases/tag/viikko6)
+
 ## Asennus
 
 1. Asenna riippuvuudet komennolla:

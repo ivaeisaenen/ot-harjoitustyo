@@ -12,6 +12,8 @@ ot-harjoitustyo.code-workspace
 .pytest_cache
 src/__pycache__/
 src/tests/__pycache__/
+src/tools/__pycache__/
+src/io/__pycache__/
 .coverage
 .coveragerc
 htmlcov

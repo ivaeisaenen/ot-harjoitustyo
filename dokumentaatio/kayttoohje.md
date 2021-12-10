@@ -7,6 +7,8 @@ Kolme tiedostoa:
 *materials (json)
 *jannityshistoria tiedostot
 
+Huomio! Nämä kaikki löytyvät data hakemistosta ja ilman näitä ohjelma ei toimi!
+
 Mallia voi katsoa data hakemiston mallitiedostoista
 
 Kun näihin tiedostoihin on määritelty haluttu:

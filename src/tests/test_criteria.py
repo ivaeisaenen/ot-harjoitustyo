@@ -4,7 +4,11 @@ from criteria import _mises, calculate_equivalent_mises, calculate_mises_sf
 from mean_stress_correction import haigh_goodman
 
 class TestCriteria(unittest.TestCase):
-    """Tests for criteria.py"""
+    """Tests for criteria.py
+
+        Currently only for Von Mises and using Goodman mean stress correction
+        when the mean stress correction is needed.
+    """
 
     def test_mises(self):
         """Von Mises stress calculation test"""

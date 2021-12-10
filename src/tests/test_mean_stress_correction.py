@@ -7,7 +7,10 @@ class TestMeanStressCorrection(unittest.TestCase):
 
 
     def test_haigh_goodman1(self):
-        """Goodman mean stress correction tests part 1"""
+        """Goodman mean stress correction tests part 1
+
+            Zero mean stress tests
+        """
         material_dict = {"fR1": 100,
                          "Rm": 300}
 
@@ -24,7 +27,10 @@ class TestMeanStressCorrection(unittest.TestCase):
 
 
     def test_haigh_goodman2(self):
-        """Goodman mean stress correction tests part 2"""
+        """Goodman mean stress correction tests part 2
+
+            Positive mean stress less than ultimate limit
+        """
         material_dict = {"fR1": 200,
                          "Rm": 400}
         stress_amplitude = 100
@@ -34,7 +40,10 @@ class TestMeanStressCorrection(unittest.TestCase):
 
 
     def test_haigh_goodman3(self):
-        """Goodman mean stress correction tests part 3"""
+        """Goodman mean stress correction tests part 3
+
+            Negative mean stress less than ultimate limit
+        """
         material_dict = {"fR1": 200,
                          "Rm": 400}
         stress_amplitude = 100
@@ -44,7 +53,10 @@ class TestMeanStressCorrection(unittest.TestCase):
 
 
     def test_haigh_goodman4(self):
-        """Goodman mean stress correction tests part 4"""
+        """Goodman mean stress correction tests part 4
+
+            Negative mean stress more than ultimate limit
+        """
         material_dict = {"fR1": 200,
                          "Rm": 400}
         stress_amplitude = 100
@@ -54,7 +66,10 @@ class TestMeanStressCorrection(unittest.TestCase):
 
 
     def test_haigh_goodman5(self):
-        """Goodman mean stress correction tests part 5"""
+        """Goodman mean stress correction tests part 5
+
+            Positive mean stress more than ultimate limit
+        """
         material_dict = {"fR1": 200,
                          "Rm": 400}
         stress_amplitude = 100

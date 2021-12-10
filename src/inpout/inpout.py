@@ -1,4 +1,5 @@
-"""input / ouput for stress history"""
+"""input / ouput for stress history and materials"""
+
 import sys
 import json
 
@@ -65,12 +66,13 @@ def write_results(input_dict):
             fil.write(f"{id_}, {values_str}\n")
 
 def read_materials(input_dict):
-    log = input_dict("log")
+    """Read materials json file"""
+    log = input_dict["log"]
     # Read material library
     if "materials" in input_dict:
-        with open(input_dict["materials"], "r") as matfile:
+        with open(input_dict["materials"], "r", encoding='utf-8') as matfile:
             material_dict = json.load(matfile)
-        log.write(f"Available materials:\n")
+        log.write("Available materials:\n")
         for key in material_dict.keys():
             log.write(f"{key}\n")
         input_dict["material_dict"] = material_dict

@@ -1,4 +1,4 @@
-"""Tools like input / ouput and program logic between user input and calculations"""
+"""Tools like calculations"""
 import sys
 # Import fatigue calculation criteria
 from criteria import calculate_mises_sf
@@ -57,5 +57,3 @@ def calculate(input_dict):
     results = fatigue_solver(stress, mat, msc)
     log.write("Done running fatigue solver\n")
     input_dict["results"] = results
-
-

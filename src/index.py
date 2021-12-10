@@ -1,8 +1,11 @@
 """The main module"""
 import time
-
-from tools import calculate, read_stress, write_results
 import json
+
+from tools import tools
+from io import io
+# from io import read_stress, write_results
+
 
 ####################################################
 # Development inputs beging later these are read from input file (produced by GUI)
@@ -43,27 +46,16 @@ log = open(input_dict["input_files"][0][:-4] + "_log.txt", "w", encoding='utf-8'
 input_dict["log"] = log
 
 # Read material library
-with open(input_dict["materials"], "r") as matfile:
-    material_dict = json.load(matfile)
-log.write(f"Available materials:\n")
-for key in material_dict.keys():
-    log.write(f"{key}\n")
-input_dict["material_dict"] = material_dict
-
-
-# Write all inputs information to the log file
-for key, value in input_dict.items():
-    if key != "log":
-       log.write(f"{key}:{value}\n")
+io.read_materials(input_dict)
 
 # Read the stress history
-read_stress(input_dict)
+io.read_stress(input_dict)
 
 # Calculate
-calculate(input_dict)
+tools.calculate(input_dict)
 
 # Write results to a file
-write_results(input_dict)
+io.write_results(input_dict)
 
 t2 = time.time()
 log.write(f"Finished calculation in {t2-t1} seconds\n")

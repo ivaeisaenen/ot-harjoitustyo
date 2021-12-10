@@ -1,19 +1,23 @@
 # Arkkitehtuurikuvaus
 
-Ohjelman tarkoitus on laskea varmuuskertoimia jännityshistoria perusteella. 
+Ohjelman tarkoitus on laskea varmuuskertoimia jännityshistoria perusteella.
 
 Ohjelman syötteitä ovat:
 
-- Jännityshistoria (Luetaan tiedostosta)
+- Määrittelyparametrit eli mitä ohjelman halutaan laskevan (luetaan tiedostosta (json))
 
-- Materiaalitiedot (tällä hetkellä dict index.py tiedostossa, luetaan myöhemmin tiedostosta)
+- Jännityshistoria (Luetaan tiedostosta (ascii))
+
+- Materiaalitiedot (Luetaan tiedostosta (json))
+
+(Nämä kaikki voisi generoida graafisen käyttöliittymän kautta halutessa, mutta yleensä tälläistä ohjelmaa käytetään komentoriviltä osana isompaa prosessia scriptien avulla joten json syötteet ovat luultavasti ihan kätevä valinta)
 
 Varsinaisessa laskennassa valitaan:
 
 - Keskijännityskorjaus (esimerkiksi Goodman tai vastaava)
 - Vauriokriteeri (Esimrkiksi Von Mises, MMK, Findley, Matake ja niin edelleen)
 
-Tulos kirjoitetaan tulostiedostoon ja sisältää tuloksen jokaiselle yksittäisen jännityshistorian yksikölle
+Tulos kirjoitetaan tulostiedostoon ja sisältää tuloksen jokaiselle yksittäisen jännityshistorian yksikölle. Rajallisten resurssien takia luonnollisesti tässä harjoitustyössä ei koodata kuin yksi tai korkeintaan kaksi kriteeriä mutta loput on erittäin helppo laajentaa näin halutessaan.
 
 ![Arkkitehtuuri](./kuvat/arkkitehtuuri.png)
 
@@ -48,7 +52,7 @@ Sovellukset suoritus on varsin suoraviivaista.
 * 2. suoritetaan modulin tools calculate funktio hakee moduleista criteria ja mean_stress_correction lähtötietoja vastaavat funktiot ja suoritus alkaa
 	* 2.1 aloitetaan criteria modulin mukainen varmuuskertoimen laskenta jossa jokaiselle solmulle
 		* 2.1.1 lasketaan equivalentti jännitys ensiksi muodostamalla yksiaksiaalinen jännitys ja sitten sen perusteella etsimällä historian yli amplitudi- ja keskijännitys
-		* 2.1.2 suoritetaan keskijännityskorjaus 
+		* 2.1.2 suoritetaan keskijännityskorjaus
 		* 2.1.3 lasketaan varmuuskerroin ja palautetaan varmuuskerroin ja muut tulokset
 * 3. modulissa index kirjoitetaan modulin tools funktiolla write_results tulokset tiedostoon
 

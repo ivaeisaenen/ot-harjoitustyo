@@ -7,5 +7,5 @@
 | 23.11. | 4    | Testit |
 | 10.12  | 6    | Refaktorointi ja dokumentaatiot |
 |   .12  |      | |
-| :----- |:-----| |
+| :----:|:-----| |
 | Summa  | 18   |  |

@@ -47,6 +47,13 @@ class TestCriteria(unittest.TestCase):
         self.assertEqual(stress_amplitude, 38.35914511481498)
         self.assertEqual(mean_stress, 4.536076064239452)
 
+        # fourth
+        stress_history = [[ 1.0, 2.0, 3.0, 1.0, 5.0, 9.0]]
+        stress_amplitude, mean_stress = calculate_equivalent_mises(stress_history)
+        self.assertEqual(stress_amplitude, 9.0)
+        self.assertEqual(mean_stress, 9.0)
+
+
     def test_calculate_mises_sf(self):
         """Von Mises safety factor calculation test"""
 

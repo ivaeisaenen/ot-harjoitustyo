@@ -1,8 +1,0 @@
-Available materials:
-steel
-Reading file "./data/stress_history1.txt"
-Reading file "./data/stress_history2.txt"
-Stress read "['./data/stress_history1.txt', './data/stress_history2.txt']" lenght 2
-Start running fatigue solver
-Done running fatigue solver
-Finished calculation in 0.0050470829010009766 seconds

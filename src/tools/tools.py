@@ -31,26 +31,28 @@ def calculate(input_dict):
     # elif fat_str == "MMK":
         # fatigue_solver == calculate_MMK_sf
     else:
-        log.write(f"calculate: Invalid fatigue solver name \"{fat_str}\" ...\n")
+        input_dict["error"] = True
+        log.write(f"calculate: Invalid fatigue solver name {fat_str} ...\n")
         log.close()
-        sys.exit()
+        sys.exit(11)
 
-    try:
+    if input_dict["material_name"] in input_dict["material_dict"].keys():
         mat = input_dict["material_dict"][input_dict["material_name"]]
-    except KeyError as error_str:
-        log.write(f"calculate: Invalid material name \"{mat_str}\" caused error:\n")
-        log.write(f"{error_str}\n")
+    else:
+        input_dict["error"] = True
+        log.write(f"calculate: Invalid material name \"{mat_str}\" ...\n")
         log.close()
-        sys.exit()
+        sys.exit(22)
 
     if msc_str == "goodman":
         msc = haigh_goodman
     # elif msc_str == "haigh_cast_iron":
         # msc = haigh_cast_iron
     else:
-        log.write(f"calculate: Invalid material name \"{mat_str}\" ...\n")
+        input_dict["error"] = True
+        log.write(f"calculate: Invalid msc name \"{msc_str}\" ...\n")
         log.close()
-        sys.exit()
+        sys.exit(33)
 
 
     log.write("Start running fatigue solver\n")

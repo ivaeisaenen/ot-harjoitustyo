@@ -19,16 +19,23 @@ def read_stress(input_dict):
                 if len(line_splitted) != 7:
                     log.write(f"Failed read file \"{input_file}\" line {i} \"{line}\" ...\n")
                     log.close()
-                    sys.exit()
+                    sys.exit(44)
                 try:
                     id_ = int(line_splitted[0])
-                    stress = []
-                    for stress_component in line_splitted[1:]:
-                        stress.append(float(stress_component))
-                except TypeError:
+                except ValueError:
                     log.write(f"Failed read file \"{input_file}\" line {i} \"{line}\" ...\n")
                     log.close()
-                    sys.exit()
+                    sys.exit(55)
+
+                stress = []
+                for stress_component in line_splitted[1:]:
+                    try:
+                        stress.append(float(stress_component))
+                    except ValueError:
+                        log.write(f"Failed read file \"{input_file}\" line {i} \"{line}\" ...\n")
+                        log.close()
+                        sys.exit(66)
+
                 data.append([id_, stress])
             datas.append(data)
 
@@ -77,4 +84,6 @@ def read_materials(input_dict):
             log.write(f"{key}\n")
         input_dict["material_dict"] = material_dict
     else:
-        log.write("Error! Input have to spesicifed input file")
+        log.write("Error! Material file has not been specified!")
+        log.close()
+        sys.exit(77)

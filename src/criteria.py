@@ -13,7 +13,6 @@ def _mises(stress: list):
         signed_mises: float
             Signed Von Mises stress
     """
-    assert len(stress) == 6
 
     if sum(stress[:3]) >= 0.0:
         sign = 1

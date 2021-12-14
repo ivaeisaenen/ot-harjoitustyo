@@ -62,3 +62,4 @@ Tämän jälkeen tuloksia voi tarkastella visuaalisesti vaikkapa paraviewillä k
 
 ### Tiedostot
 
+Data hakemistossa olevia tiedostoja ei tarvita sinänsä ohjelman ajamiseen mutta kuten aiemmin mainittua ohjelma tarvitsee jännityshistoria ascii tiedostot. ajokomenntit ja materiaali json tiedostot (input.json ja materials.json) toimiakseen joten esimerkkitiedostot ovat täällä data hakemistossa ja ainakin toistaiseksi testeissä tarvittavat tiedostot myös.

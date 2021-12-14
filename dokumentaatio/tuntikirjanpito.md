@@ -6,5 +6,5 @@
 | 22.11. | 6    | Peruskoodi |
 | 23.11. | 4    | Testit |
 | 10.12  | 6    | Refaktorointi ja dokumentaatiot |
-|   .12  |      | |
-| Summa  | 18   | |
+| 14.12  | 4    | Lisää testejä ja sen sellaista |
+| Summa  | 22   | |

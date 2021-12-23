@@ -9,7 +9,7 @@ from tools import tools
 from inpout import inpout
 
 # Read inputs
-with open("./data/input.json", "r", encoding='utf-8') as inputfile:
+with open("./data/example1/input.json", "r", encoding='utf-8') as inputfile:
     input_dict = json.load(inputfile)
 
 # Open log file

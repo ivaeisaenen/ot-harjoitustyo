@@ -1,5 +1,4 @@
-{"material": "steel", 
-"criterion": "mises", 
+{"criterion": "mises", 
 "mean_stress_correction": "goodman", 
 "input_files": ["./data/stress_history1.txt", "./data/stress_history2.txt"], 
 "material_name": "steel", 

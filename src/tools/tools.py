@@ -1,11 +1,11 @@
 """Tools like calculations"""
 import sys
 # Import fatigue calculation criteria
-from criteria import calculate_mises_sf
+from criteria import calculate_mises_sf, calculate_tresca_sf
 # from criteria import calculate_MMK_sf
 
 # Import mean stress corrections
-from mean_stress_correction import haigh_goodman
+from mean_stress_correction import haigh_gerbel, haigh_goodman, haigh_soderberg, haigh_none
 # from mean_stress_correction import haigh_cast_iron
 # from mean_stress_correction import haigh_steel
 
@@ -23,11 +23,13 @@ def calculate(input_dict):
     stress = input_dict["stress_history"]
 
     fat_str = input_dict["criterion"]
-    mat_str = input_dict["material"]
+    mat_str = input_dict["material_name"]
     msc_str = input_dict["mean_stress_correction"]
 
     if fat_str == "mises":
         fatigue_solver = calculate_mises_sf
+    elif fat_str == "tresca":
+        fatigue_solver = calculate_tresca_sf
     # elif fat_str == "MMK":
         # fatigue_solver == calculate_MMK_sf
     else:
@@ -44,10 +46,18 @@ def calculate(input_dict):
         log.close()
         sys.exit(22)
 
-    if msc_str == "goodman":
+    if msc_str == "none":
+        msc = haigh_none
+    elif msc_str == "goodman":
         msc = haigh_goodman
+    elif msc_str == "gerbel":
+        msc = haigh_gerbel
+    elif msc_str == "soderberg":
+        msc = haigh_soderberg
     # elif msc_str == "haigh_cast_iron":
         # msc = haigh_cast_iron
+    # elif msc_str == "fkm":
+        # msc = fkm
     else:
         input_dict["error"] = True
         log.write(f"calculate: Invalid msc name \"{msc_str}\" ...\n")

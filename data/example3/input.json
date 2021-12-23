@@ -1,0 +1,5 @@
+{"criterion": "mises", 
+"mean_stress_correction": "soderberg", 
+"input_files": ["./data/example3/stress_history1.txt", "./data/example3/stress_history2.txt"], 
+"material_name": "steel", 
+"materials": "./data/example3/materials.json"}

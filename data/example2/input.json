@@ -1,0 +1,5 @@
+{"criterion": "tresca", 
+"mean_stress_correction": "goodman", 
+"input_files": ["./data/example2/stress_history1.txt", "./data/example2/stress_history2.txt"], 
+"material_name": "steel", 
+"materials": "./data/example2/materials.json"}

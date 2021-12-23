@@ -28,5 +28,7 @@ htmlcov
 data/input_dict_gui_generated.json
 data/stress_history1_log.txt
 data/stress_history1_result.txt
-src/gui.py
-src/inpout/__pycache__/inpout.cpython-310.pyc
+data/temp/
+*_log.txt
+*_result.txt
+src/inpout/__pycache__/

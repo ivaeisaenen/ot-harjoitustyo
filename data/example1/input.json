@@ -1,0 +1,5 @@
+{"criterion": "mises", 
+"mean_stress_correction": "goodman", 
+"input_files": ["./data/example1/stress_history1.txt", "./data/example1/stress_history2.txt"], 
+"material_name": "cast_iron", 
+"materials": "./data/example1/materials.json"}

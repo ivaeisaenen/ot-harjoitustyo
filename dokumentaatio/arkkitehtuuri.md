@@ -21,6 +21,19 @@ Tulos kirjoitetaan tulostiedostoon ja sisältää tuloksen jokaiselle yksittäis
 
 ![Arkkitehtuuri](./kuvat/arkkitehtuuri.png)
 
+### HDF5
+
+Tietokantoja ei kannata käyttää tässä yhteydessä tiedon varastointiin vaan esimerkiksi HDF5 tai vastaavaa ratkaisua.
+
+[Improving the scalability of Elmer finite element software](https://prace-ri.eu/wp-content/uploads/Improving_the_scalability_of_Elmer_finite_element_software.pdf)
+[HDF5: A Useful Enhancement for MSC Nastran and Patran](https://simulatemore.mscsoftware.com/hdf5-a-useful-enhancement-for-msc-nastran-and-patran/)
+[A new approach to interoperability using HDF5](http://congress.cimne.com/icme2016/admin/files/filepaper/p17.pdf)
+
+
+Yleisesti FEM analyysissä on seuraavanlainen ongelma. Haluttuja suureita voi olla kymmeniä jos ei satoja, kuten jännitys, siirtymä, lämpötila ja muut erilaiset suureet. Jokaisella solmulla, integrointipisteellä tai elementillä halutaan tallentaa näitä tietoja. Laskenta etenee aika askeleittain ja tiedot tallennetaan yleensä aika askel 1 2 3 alle niin että joka askeleelle tallennetaan tieto aina jokaiselle yksikölle (solmu, integrointipiste, elementti) ja jokaiselle suureelle erikseen.
+
+Kun tietoa kuitenkin luetaan niin haluttaisiin usein yhden solmun tietyn suureen koko aikahistoria. Nyt täytyy siis ottaa tieto matriisista jonka koko on kymmeniä tai satoja miljoonia solmuja (integrointipisteitä ja elementtejä), tuhansia aika-askeleita ja satoja suureita.
+
 ## Rakenne
 
 Tarkoitus on erottaa ohjelmistologiikka, käyttöliittymä ja varsinaisen laskennan suorittavat modulit täysin toisistaan.

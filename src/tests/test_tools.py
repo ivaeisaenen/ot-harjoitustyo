@@ -1,22 +1,27 @@
 """Tools test module"""
 import unittest
-# from criteria import _mises, calculate_equivalent_mises, calculate_mises_sf
-# from mean_stress_correction import haigh_goodman
 from tools import tools
 
 class LogOpen:
     """Class to emulate open log file"""
     def __init__(self):
         self.list_of_strings = []
-    def write(self, s):
-        s = str(s)
-        self.list_of_strings.append(s)
+    def write(self, string_):
+        """Append string to list of strings"""
+        string_ = str(string_)
+        self.list_of_strings.append(string_)
     def close(self):
+        """Print out list of strings"""
+        # print(self.list_of_strings)
         pass
 
+
 class TestTools(unittest.TestCase):
+    """Test Tools class"""
 
     def test_calculate1(self):
+        """Test Tools.Calculate"""
+
         input_dict = {}
 
         log = LogOpen()
@@ -120,12 +125,12 @@ class TestTools(unittest.TestCase):
             self.assertEqual(cm.exception.code, 11)
 
         test_passed = False
-        for s in input_dict["log"].list_of_strings:
-            print(f"s11={s}")
-            if "calculate: Invalid fatigue solver name umppalumppa ..." in s:
+        for string_ in input_dict["log"].list_of_strings:
+            if "calculate: Invalid fatigue solver name umppalumppa ..." in string_:
                 test_passed = True
-        self.assertTrue(test_passed == True)
-        self.assertTrue(input_dict["error"] == True)
+        self.assertTrue(test_passed)
+        self.assertTrue(input_dict["error"])
+
 
     def test_calculate3(self):
         """Wrong material name"""
@@ -165,12 +170,11 @@ class TestTools(unittest.TestCase):
             self.assertEqual(cm.exception.code, 22)
 
         test_passed = False
-        for s in input_dict["log"].list_of_strings:
-            print(f"s22={s}")
-            if f"calculate: Invalid material name \"{mat_str}\"" in s:
+        for string_ in input_dict["log"].list_of_strings:
+            if f"calculate: Invalid material name \"{mat_str}\"" in string_:
                 test_passed = True
         self.assertTrue(test_passed)
-        self.assertTrue(input_dict["error"] == True)
+        self.assertTrue(input_dict["error"])
 
 
     def test_calculate4(self):
@@ -211,9 +215,8 @@ class TestTools(unittest.TestCase):
             self.assertEqual(cm.exception.code, 33)
 
         test_passed = False
-        for s in input_dict["log"].list_of_strings:
-            print(f"s={s}")
-            if f"calculate: Invalid msc name \"{msc_str}\" ..." in s:
+        for string_ in input_dict["log"].list_of_strings:
+            if f"calculate: Invalid msc name \"{msc_str}\" ..." in string_:
                 test_passed = True
-        self.assertTrue(test_passed == True)
-        self.assertTrue(input_dict["error"] == True)
+        self.assertTrue(test_passed)
+        self.assertTrue(input_dict["error"])

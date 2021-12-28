@@ -7,4 +7,5 @@
 | 23.11. | 4    | Testit |
 | 10.12  | 6    | Refaktorointi ja dokumentaatiot |
 | 14.12  | 4    | Lisää testejä ja sen sellaista |
-| Summa  | 22   | |
+| 23.12  | 8    | GUI, HDF5 ja muita lisäysiä |
+| Summa  | 30   | |
